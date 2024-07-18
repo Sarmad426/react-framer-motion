@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <main>
+      <nav>
+        <Link to="basics" className="button">
+          Basics
+        </Link>
+      </nav>
       <motion.div
         className="card"
         whileHover={{ scale: 1.2 }}
