@@ -19,10 +19,21 @@ export const FramerMotionBasics = () => {
         {visible && (
           <motion.div
             className="animate-box"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ rotate: "180deg", opacity: 1, scale: 1, type: "spring" }}
-            exit={{ rotate: "0deg", scale: 0 }}
-            transition={{ duration: 1.5, ease: "backInOut" }}
+            initial={{ scale: 0, opacity: 0, y: 0 }}
+            animate={{
+              rotate: "180deg",
+              opacity: 1,
+              scale: 1,
+              type: "spring",
+              y: [0, 150, 150, -150, 150],
+            }}
+            exit={{
+              rotate: "0deg",
+              scale: [1, 0.5, 0.25, 0],
+              opacity: 0,
+              y: [0, 0.25, 0.5, 0.75, 1],
+            }}
+            transition={{ duration: 1.6, ease: "backInOut" }}
           ></motion.div>
         )}
       </AnimatePresence>
