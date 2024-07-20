@@ -8,6 +8,12 @@ const Home = () => {
         <Link to="basics" className="button">
           Basics
         </Link>
+        <Link to="gestures" className="button">
+          Gestures
+        </Link>
+        <Link to="animationControls" className="button">
+          Animation Controls
+        </Link>
       </nav>
       <motion.div
         className="card"
