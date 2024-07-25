@@ -17,6 +17,9 @@ const Home = () => {
         <Link to="viewAnimations" className="button">
           View Animations
         </Link>
+        <Link to="scrollAnimations" className="button">
+          Scroll Animations
+        </Link>
       </nav>
       <motion.div
         className="card"
