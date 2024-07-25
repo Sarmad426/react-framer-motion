@@ -14,6 +14,9 @@ const Home = () => {
         <Link to="animationControls" className="button">
           Animation Controls
         </Link>
+        <Link to="viewAnimations" className="button">
+          View Animations
+        </Link>
       </nav>
       <motion.div
         className="card"

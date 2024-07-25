@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import { FramerMotionBasics } from "./components/FramerMotionBasics";
 import Gestures from "./components/Gestures";
 import AnimationControls from "./components/animationControls";
+import { ViewAnimations } from "./components/viewAnimations";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/basics" element={<FramerMotionBasics />} />
           <Route path="/gestures" element={<Gestures />} />
           <Route path="/animationControls" element={<AnimationControls />} />
+          <Route path="/viewAnimations" element={<ViewAnimations />} />
         </Routes>
       </Router>
     </Fragment>
