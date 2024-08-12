@@ -1,30 +1,74 @@
-# React + TypeScript + Vite
+# Framer Motion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Framer Motion is a powerful animation library for React that allows developers to create smooth and complex animations with minimal effort. It provides an intuitive API for animating components and handles complex scenarios like gestures, drag and drop, and scroll-linked animations. Whether you're building simple transitions or intricate interactions, Framer Motion makes it easy to add a professional touch to your React applications.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with Framer Motion, you can install it via npm or yarn:
 
-## Expanding the ESLint configuration
+### Using npm
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install framer-motion
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Basic Usage
+
+Framer Motion simplifies the process of animating React components. Below are a couple of examples demonstrating its usage.
+
+### Example 1: Simple Fade-In Animation
+
+The following example shows how to create a simple fade-in effect when a component enters the viewport:
+
+```typescript
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const FadeInComponent: React.FC = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <h1>Hello, World!</h1>
+    </motion.div>
+  );
+};
+
+export default FadeInComponent;
+```
+
+### Example 2: Spring Animation with Drag
+
+This example demonstrates a spring animation combined with drag functionality, allowing the user to drag the component across the screen:
+
+```typescript
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const DraggableComponent: React.FC = () => {
+  return (
+    <motion.div
+      drag
+      dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+      whileDrag={{ scale: 1.2 }}
+      style={{
+        width: '100px',
+        height: '100px',
+        backgroundColor: 'coral',
+        borderRadius: '20px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      Drag me!
+    </motion.div>
+  );
+};
+
+export default DraggableComponent;
+```
+
+[Framer Motion documentation](https://www.framer.com/motion/).
