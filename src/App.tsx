@@ -8,6 +8,7 @@ import Gestures from "./components/Gestures";
 import AnimationControls from "./components/animationControls";
 import { ViewAnimations } from "./components/viewAnimations";
 import { ScrollAnimations } from "./components/scrollAnimations";
+import { AdvanceScrollAnimations } from "./components/advanceScrollAnimations";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
           <Route path="/animationControls" element={<AnimationControls />} />
           <Route path="/viewAnimations" element={<ViewAnimations />} />
           <Route path="/scrollAnimations" element={<ScrollAnimations />} />
+          <Route
+            path="/advanceScrollAnimations"
+            element={<AdvanceScrollAnimations />}
+          />
         </Routes>
       </Router>
     </Fragment>

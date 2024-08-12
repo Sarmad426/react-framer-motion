@@ -20,6 +20,9 @@ const Home = () => {
         <Link to="scrollAnimations" className="button">
           Scroll Animations
         </Link>
+        <Link to="advanceScrollAnimations" className="button">
+          Advance Scroll Animations
+        </Link>
       </nav>
       <motion.div
         className="card"
