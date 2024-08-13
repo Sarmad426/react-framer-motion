@@ -13,7 +13,7 @@ export const AdvanceScrollAnimations: React.FC = () => {
           initial={{ opacity: 0, y: 75 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ amount: 0.5 }}
         >
           <h1 className="text-4xl font-bold">{section}</h1>
         </motion.div>
