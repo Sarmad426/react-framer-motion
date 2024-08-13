@@ -85,6 +85,15 @@ nav {
   margin-bottom: 20px;
 }
 
+@media (prefers-color-scheme: dark) {
+  #root {
+    color: white;
+  }
+  .scroll-animate {
+    background-color: rgb(70, 70, 70);
+  }
+}
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
