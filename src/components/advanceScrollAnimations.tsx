@@ -1,27 +1,23 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-export const AdvanceScrollAnimations = () => {
+const sections = ["Section 1", "Section 2", "Section 3", "Section 4"];
+
+export const AdvanceScrollAnimations: React.FC = () => {
   return (
-    <motion.div>
-      <div className="flex" style={{ height: "100vh" }}>
-        Hi, Sarmad here
-      </div>
-      <motion.div
-        initial={{ translateX: -300, opacity: 0 }}
-        whileInView={{
-          translateX: 0,
-          opacity: 1,
-          transition: {
-            duration: 0.4,
-            ease: "easeIn",
-          },
-        }}
-        viewport={{ margin: "-300px" }}
-        className="flex"
-        style={{ height: "100vh" }}
-      >
-        <div className="animate-box"></div>
-      </motion.div>
-    </motion.div>
+    <div>
+      {sections.map((section, index) => (
+        <motion.div
+          key={index}
+          className="scroll-animate"
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <h1 className="text-4xl font-bold">{section}</h1>
+        </motion.div>
+      ))}
+    </div>
   );
 };
