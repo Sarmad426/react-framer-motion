@@ -9,6 +9,7 @@ import AnimationControls from "./components/animationControls";
 import { ViewAnimations } from "./components/viewAnimations";
 import { ScrollAnimations } from "./components/scrollAnimations";
 import { AdvanceScrollAnimations } from "./components/advanceScrollAnimations";
+import SwipeCards from "./components/TinderSwipeCards";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             path="/advanceScrollAnimations"
             element={<AdvanceScrollAnimations />}
           />
+          <Route path="/tinderSwipeCards" element={<SwipeCards />} />
         </Routes>
       </Router>
     </Fragment>
