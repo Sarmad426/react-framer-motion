@@ -3,6 +3,7 @@
   --primary-hover-color: rgb(155, 62, 242);
   --primary-button-color: orange;
   --primary-text-color: rgb(240, 240, 240);
+  --secondary-text-color: rgb(220, 220, 220);
   --primary-box-color: cadetblue;
 }
 
@@ -33,16 +34,36 @@
   outline: none;
 }
 
-nav {
-  margin-bottom: 100px;
+/* nav {
   .button {
     background-color: var(--primary-color);
     color: var(--primary-text-color);
-    margin: 15px;
   }
   .button:hover {
     background-color: var(--primary-hover-color);
     color: var(--primary-text-color);
+  }
+} */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+nav {
+  margin: 0;
+  .button {
+    background-color: transparent;
+    color: var(--secondary-text-color);
+    text-align: start;
+    &:hover {
+      color: white;
+    }
+  }
+  .active {
+    color: aquamarine;
   }
 }
 
@@ -52,13 +73,6 @@ nav {
   background-color: var(--primary-box-color);
   border-radius: 5px;
   margin-top: 30px;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
 
 /* Scroll animations page */
