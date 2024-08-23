@@ -1,29 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <main>
-      <nav>
-        <Link to="basics" className="button">
-          Basics
-        </Link>
-        <Link to="gestures" className="button">
-          Gestures
-        </Link>
-        <Link to="animationControls" className="button">
-          Animation Controls
-        </Link>
-        <Link to="viewAnimations" className="button">
-          View Animations
-        </Link>
-        <Link to="scrollAnimations" className="button">
-          Scroll Animations
-        </Link>
-        <Link to="advanceScrollAnimations" className="button">
-          Advance Scroll Animations
-        </Link>
-      </nav>
       <motion.div
         className="card"
         whileHover={{ scale: 1.2 }}

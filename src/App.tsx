@@ -11,11 +11,15 @@ import { ScrollAnimations } from "./components/scrollAnimations";
 import { AdvanceScrollAnimations } from "./components/advanceScrollAnimations";
 import SwipeCards from "./components/TinderSwipeCards";
 import { NotFound } from "./components/404-not-found";
+import { Navbar } from "./components/navbar";
 
 function App() {
   return (
     <Fragment>
       <Router>
+        <header>
+          <Navbar />
+        </header>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/basics" element={<FramerMotionBasics />} />
