@@ -10,6 +10,7 @@ import { ViewAnimations } from "./components/viewAnimations";
 import { ScrollAnimations } from "./components/scrollAnimations";
 import { AdvanceScrollAnimations } from "./components/advanceScrollAnimations";
 import SwipeCards from "./components/TinderSwipeCards";
+import { NotFound } from "./components/404-not-found";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             element={<AdvanceScrollAnimations />}
           />
           <Route path="/tinderSwipeCards" element={<SwipeCards />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </Fragment>
