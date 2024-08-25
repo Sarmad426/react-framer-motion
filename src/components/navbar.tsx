@@ -8,8 +8,6 @@ export const Navbar = () => {
     return isActive ? "active" : "";
   };
 
-  console.log("Pathname", location.pathname);
-
   return (
     <nav className="flex flex-col gap-4 absolute left-0 top-0 p-6 h-screen dark:bg-gray-700 bg-gray-100">
       <Link to="/basics" className={`button ${getLinkClass("/basics")}`}>
