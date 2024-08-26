@@ -56,14 +56,14 @@ nav {
   margin: 0;
   .button {
     background-color: transparent;
-    color: var(--secondary-text-color);
+    color: black;
     text-align: start;
     &:hover {
-      color: white;
+      color: var(--primary-box-color);
     }
   }
   .active {
-    color: aquamarine;
+    color: var(--primary-box-color);
   }
 }
 
@@ -105,6 +105,15 @@ nav {
   }
   .scroll-animate {
     background-color: rgb(70, 70, 70);
+  }
+  nav .button {
+    color: white;
+    &:hover {
+      color: aquamarine;
+    }
+  }
+  nav .active {
+    color: aquamarine;
   }
 }
 
