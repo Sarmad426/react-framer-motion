@@ -1,4 +1,6 @@
 import { motion, MotionConfig } from "framer-motion";
+import AnimatedButton from "./animated-button";
+import SpotLightButton from "./spotlight-button";
 
 export default function Gestures() {
   return (
@@ -7,7 +9,7 @@ export default function Gestures() {
         // Sets the props for all the child elements
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
-        <div className="flex">
+        <div className="flex gap-4">
           <motion.button
             className="button"
             whileHover={{ scale: 1.05 }}
@@ -22,6 +24,10 @@ export default function Gestures() {
           >
             Button2
           </motion.button>
+        </div>
+        <div className="mt-6 flex gap-4">
+          <AnimatedButton />
+          <SpotLightButton />
         </div>
       </MotionConfig>
     </div>
