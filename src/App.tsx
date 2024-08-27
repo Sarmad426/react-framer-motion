@@ -12,6 +12,7 @@ import { AdvanceScrollAnimations } from "./components/advanceScrollAnimations";
 import SwipeCards from "./components/TinderSwipeCards";
 import { NotFound } from "./components/404-not-found";
 import { Navbar } from "./components/navbar";
+import HoverTiltCard from "./components/hover-tilt-card";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             element={<AdvanceScrollAnimations />}
           />
           <Route path="/tinderSwipeCards" element={<SwipeCards />} />
+          <Route path="/hoverTiltCard" element={<HoverTiltCard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

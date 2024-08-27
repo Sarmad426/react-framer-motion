@@ -46,6 +46,12 @@ export const Navbar = () => {
       >
         Tinder Swipe Cards
       </Link>
+      <Link
+        to="/hoverTiltCard"
+        className={`button ${getLinkClass("/hoverTiltCard")}`}
+      >
+        Hover Tilt Card
+      </Link>
     </nav>
   );
 };
