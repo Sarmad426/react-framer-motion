@@ -13,6 +13,7 @@ import SwipeCards from "./components/TinderSwipeCards";
 import { NotFound } from "./components/404-not-found";
 import { Navbar } from "./components/navbar";
 import HoverTiltCard from "./components/hover-tilt-card";
+import { SwipeCarousel } from "./components/swipe-carousel";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           />
           <Route path="/tinderSwipeCards" element={<SwipeCards />} />
           <Route path="/hoverTiltCard" element={<HoverTiltCard />} />
+          <Route path="/swipeCarousel" element={<SwipeCarousel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

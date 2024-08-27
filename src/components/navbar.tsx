@@ -52,6 +52,12 @@ export const Navbar = () => {
       >
         Hover Tilt Card
       </Link>
+      <Link
+        to="/swipeCarousel"
+        className={`button ${getLinkClass("/swipeCarousel")}`}
+      >
+        Swipe Carousel
+      </Link>
     </nav>
   );
 };
